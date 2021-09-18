@@ -1,4 +1,4 @@
-#Question number 01:
+#Question number 01:.
 We have many operatos to work with folloeing are examples of these operators.
 /*there are various type of operators in Dart.
  * such as :Arithmetic operators, Equivalent and relational operators ,logical operators
@@ -71,6 +71,6 @@ true not equal
 true And operator(all expression must be true) for true result
 true OR Operator(atleast one expression must be true) for true result
 false Not equal(return inverse of the result)
-
+pirnt 
 
 
