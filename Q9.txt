@@ -1,0 +1,16 @@
+# Question number 09:
+void main() {
+ var list1=['Farhan', 'Bilal','Ahsan'];
+ var list2=[422,400,450];
+ var total =500;
+ num per0= list2[0]/total * 100;
+ num per1= list2[1]/total * 100;
+ num per2= list2[2]/total * 100;
+ print("${list1[0]} your total marks are: ${list2[0]}\nAnd your percentage is ${per0}\n\n");
+ print("${list1[1]} your total marks are: ${list2[1]}\nAnd your percentage is ${per1}\n\n");
+ print("${list1[2]} your total marks are: ${list2[2]}\nAnd your percentage is ${per2}\n\n");
+             
+ 
+}
+
+

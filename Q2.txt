@@ -1,0 +1,35 @@
+#Question number 02:
+
+
+a. var a = 2, b = 1;
+b. var result = --a - --b + ++b + b--;
+Explain the output at each stage:
+c. --a;
+d. --a - --b;
+e. --a - --b + ++b;
+f. --a - --b + ++b + b--;
+
+Answer c): the output of this statment is 1 
+          as the state is pre decrement so the value of will subtract first then will again assign in variable a
+
+Answer d): the output of this statenent is 1
+          as the sate is defined above that is 1 and b performs the same operation of pre decreament and after subtracting 1 from b it becomes 0 so the result will 
+          be a (which is 1) -  b(which is 0) gives the output 1
+
+Answer e): the output of this statment is 2 because 
+           as above statment, the output of --a - --b; is 1 which is explained above , then ++b performs a pre increament so the value of b is 0 for now and after adding 1 into b it becomes
+           1 then according to the statment --a - --b (which is 1) + (++b) gives the output of 2
+
+Answer f): the output of this statment is 3 because 
+           as above statment, the output of --a --b + ++b is 2 which is explained above , then b-- performs a post decreamnt so the it will add the value of b to the statment then subtract 1 from b 
+           so accordind to the statment --a - --b + ++b(which is 2) + b--(which 1 before the postdecreament ); gives the output 3
+ 
+
+
+
+
+
+
+
+
+

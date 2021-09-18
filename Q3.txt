@@ -1,0 +1,9 @@
+#Question number 03:
+
+
+void main() 
+{ 
+  int one_ticket= 600;
+  int buying_ticket = one_ticket*5;
+  print("your total Amount for 5 tickets is : ${buying_ticket}");
+} 
