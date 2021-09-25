@@ -5,3 +5,9 @@ var fruits = ["apple","banana","mango","orange","strawberry"];
     print(i);
   }
 }
+output :
+apple
+banana
+mango
+orange
+strawberry

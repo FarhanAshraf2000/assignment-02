@@ -1,0 +1,28 @@
+//Question Number 9
+void main(){
+//   the user will put the two values for the operation purpose 
+  var firstnum = 10;
+  var secondnum = 5;
+//  here the user will input the operator that he wants to do 
+//   in the calculator 
+  var operation= "*";
+  if (operation=="+"){
+    print (firstnum + secondnum);
+  }else if (operation=="-"){
+     print (firstnum - secondnum); 
+  }else if (operation=="*"){
+    print (firstnum * secondnum);
+  }else if (operation =="/"){
+    var a = firstnum / secondnum;
+    print (a);
+  }else if (operation == "%"){
+    var b = firstnum % secondnum;
+    print (b);
+  }
+}
+output:
+for "+"= 15
+for "-"= 5
+for "*"= 50
+for "/"= 2
+for "%"= 0

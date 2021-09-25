@@ -1,6 +1,6 @@
 //Question Number 10
 void main(){
-  var vowel= "a";
+  String vowel= "a";
     if (vowel== "a" || vowel== "e"||vowel== "i"||vowel== "o"||vowel== "u" ){
       print("the following alphabet : ${vowel} is a vowel");
     
@@ -8,3 +8,9 @@ void main(){
       print("the following alphabet that you have entered is not a vowel \nits consonant ");
     }
 }
+output:
+The following alphabet : a is a vowel
+
+by give a variable c the output will become:
+The following alphabet that you have entered is not a vowel 
+its a consonant 
