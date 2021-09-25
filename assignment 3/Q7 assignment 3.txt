@@ -1,0 +1,7 @@
+//Question Number 7
+void main(){
+  for (var i= 1; i<=100; i++){
+    var a= i*5;
+    print("${i} 5 is eqaul to ${a} ");
+  }
+} 

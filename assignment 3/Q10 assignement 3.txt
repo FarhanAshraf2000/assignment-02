@@ -1,0 +1,10 @@
+//Question Number 10
+void main(){
+  var vowel= "a";
+    if (vowel== "a" || vowel== "e"||vowel== "i"||vowel== "o"||vowel== "u" ){
+      print("the following alphabet : ${vowel} is a vowel");
+    
+    }else{
+      print("the following alphabet that you have entered is not a vowel \nits consonant ");
+    }
+}
