@@ -1,0 +1,13 @@
+void main (){
+  
+  abc(9);
+  
+  
+  
+}
+void abc(var table ){
+  for(var i = 1; i<=10 ; i++){
+    var j = table *i;
+    print ("${table} x ${i} is equal to  ${j}");
+  }
+}

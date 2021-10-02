@@ -1,0 +1,18 @@
+void main(){
+  Automobile obj=Automobile();
+  obj.car();
+  obj.bike(120);
+}
+
+class Automobile{
+  void car(){
+    print("corolla,civic");
+  }
+  void bike(var cc){
+    print("$cc cc bike");
+  }
+}
+
+// result
+// corolla,civic
+// 400 cc bike

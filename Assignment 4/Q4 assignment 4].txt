@@ -1,0 +1,28 @@
+void main(){
+  
+  var a=[92,89,29,90,99,98,0];
+  var b=["farhan","arsalan","bial","ahsan","mustarad","ahmed","sarim"];
+   for(var i =0;i<a.length ; i++){
+     abc(a[i],b[i],i);
+   }
+  
+  
+  
+  
+}
+void abc(num per,var name,var rollno){
+  
+  if (per >=90  ){
+    print ("${name} \n roll no :${rollno} you have pass the exam with grade A\n ");
+  }else if(per>=75){
+    print ("${name} \n roll no :${rollno} you have pass the exam with grade B \n "); 
+  }else if(per>=65){
+    print ("${name}\n roll no :${rollno}  you have pass the exam with grade c \n ");
+  }else if(per>=60){
+    print ("${name}\n roll no :${rollno}  you have pass the exam with grade D \n ");
+  }else if(per>=50){
+    print ("${name}\n roll no :${rollno} you have pass the exam with grade F \n ");
+  }else {
+    print ("${name}\n roll no :${rollno}  you have failed this semester ");
+  }
+}
