@@ -27,7 +27,7 @@ class Fin extends StatelessWidget {
                   width: 400,
                   child: TextField(
                     decoration: InputDecoration(
-                        fillColor: Colors.lightBlue[50],
+                        fillColor: Colors.white10,
                         filled: true,
                         hintText: "Email",
                         border: OutlineInputBorder(
@@ -42,7 +42,7 @@ class Fin extends StatelessWidget {
                   child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(
-                        fillColor: Colors.lightBlue[50],
+                        fillColor: Colors.white10,
                         filled: true,
                         hintText: "Password",
                         border: OutlineInputBorder(
