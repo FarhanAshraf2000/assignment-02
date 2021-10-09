@@ -16,6 +16,7 @@ class Fin extends StatelessWidget {
           backgroundColor: Colors.white10,
           appBar: AppBar(
             title: Center(child: Text("LOGIN")),
+            backgroundColor: Colors.blueAccent,
           ),
           body: Center(
             child: Column(
@@ -24,7 +25,21 @@ class Fin extends StatelessWidget {
                   height: 170,
                 ),
                 Container(
-                  width: 400,
+                  width: 500,
+                  child: TextField(
+                    decoration: InputDecoration(
+                        fillColor: Colors.white10,
+                        filled: true,
+                        hintText: "Username",
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5))),
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Container(
+                  width: 500,
                   child: TextField(
                     decoration: InputDecoration(
                         fillColor: Colors.white10,
@@ -38,7 +53,7 @@ class Fin extends StatelessWidget {
                   height: 30,
                 ),
                 Container(
-                  width: 400,
+                  width: 500,
                   child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(
