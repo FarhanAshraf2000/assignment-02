@@ -1,0 +1,96 @@
+import 'package:farhan/media.dart';
+
+import 'package:farhan/practice.dart';
+import 'package:flutter/material.dart';
+
+class media extends StatelessWidget {
+  const media({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          title: Text("Bass"),
+          centerTitle: true,
+          leading: BackButton(),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => music()));
+                },
+                icon: Icon(Icons.arrow_right))
+          ],
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(16)),
+          ),
+        ),
+        body: Container(
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Center(
+                child: Container(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => music()));
+                    },
+                    child: Text("login "),
+                  ),
+                ),
+              ),
+              Image.network(
+                  "https://cdna.artstation.com/p/assets/images/images/019/092/958/large/dakota-fortier-headphones-wallpaper.jpg?1561997633",
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                  height: double.infinity),
+              SizedBox(
+                height: 400,
+                child: Container(
+                  child: TextField(
+                    decoration: InputDecoration(
+                        fillColor: Colors.black12,
+                        filled: true,
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                        hintText: "your name",
+                        labelText: "Username",
+                        suffixIcon: IconButton(
+                            onPressed: () {}, icon: Icon(Icons.face)),
+                        labelStyle:
+                            TextStyle(fontSize: 18, color: Colors.white),
+                        hintStyle:
+                            TextStyle(fontSize: 14, color: Colors.black)),
+                    obscureText: false,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 200,
+                child: Container(
+                  child: TextField(
+                    decoration: InputDecoration(
+                        fillColor: Colors.black12,
+                        filled: true,
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                        hintText: "your Password",
+                        labelText: "Password",
+                        suffixIcon: IconButton(
+                            onPressed: () {}, icon: Icon(Icons.face)),
+                        labelStyle:
+                            TextStyle(fontSize: 18, color: Colors.white),
+                        hintStyle:
+                            TextStyle(fontSize: 14, color: Colors.black)),
+                    obscureText: true,
+                  ),
+                ),
+              )
+            ],
+          ),
+        ));
+  }
+}
