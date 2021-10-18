@@ -9,11 +9,15 @@ class task2 extends StatefulWidget {
   _task2State createState() => _task2State();
 }
 
-var data = ["farhan", "bilal", "yousuf", "daniyal"];
+var data = [
+  "Nike Red 3.0",
+  "Nike Running ",
+  "Nike Free 2.0",
+];
 var img = [
-  "lib/assets/shoes1.jpg",
-  "lib/assets/shoes2.jpeg",
-  "lib/assets/shoes3.jpg"
+  "lib/assets/shoe1.jpg",
+  "lib/assets/shoes3.jpg",
+  "lib/assets/nike.jpg"
 ];
 
 class _task2State extends State<task2> {
@@ -22,22 +26,49 @@ class _task2State extends State<task2> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: Text("Mobifitness"),
-        leading: Image.network(
-            "https://images-platform.99static.com//ncWrjlVB7zv_hI8lRFNZwvtsiWQ=/85x0:1931x1846/fit-in/500x500/99designs-contests-attachments/65/65780/attachment_65780924"),
+        title: Text("Nike"),
+        titleTextStyle: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 30,
+            fontStyle: FontStyle.italic),
+        leading: Image(
+          image: AssetImage("lib/assets/logo.jpg"),
+          height: 100,
+          width: 100,
+        ),
         actions: [Icon(Icons.search)],
       ),
-      body: ListView.builder(
-          itemCount: data.length,
-          itemBuilder: (context, index) {
-            return abc(data[index], img[index]);
-          }),
+      body: Column(children: [
+        Container(
+          child: Padding(
+            padding: const EdgeInsets.only(right: 400),
+            child: Text(
+              "Running",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+          ),
+          margin: EdgeInsets.only(top: 20, bottom: 20, right: 150),
+        ),
+        Expanded(
+            child: ListView.builder(
+                itemCount: data.length,
+                itemBuilder: (context, index) {
+                  return abc(data[index], img[index]);
+                })),
+      ]),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+        BottomNavigationBarItem(icon: Icon(Icons.face), label: "Profile"),
+        BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Settings"),
+        BottomNavigationBarItem(icon: Icon(Icons.star), label: "Liked"),
+      ], unselectedItemColor: Colors.red, fixedColor: Colors.red),
     );
   }
 }
 
 Widget abc(String data, var img) {
   return Card(
+    elevation: 20,
     child: Row(
       children: [
         Image(
@@ -46,7 +77,26 @@ Widget abc(String data, var img) {
           width: 130,
         ),
         Column(
-          children: [Text("Men's runner "), Text("RS 21000")],
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Text(data),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text("RS 21000"),
+            SizedBox(
+              height: 1,
+            ),
+            Text("Ratings"),
+            Image(
+              image: NetworkImage(
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPEnaiObbBwkr78NvjqnYi0QxU3Fe6oksxrr2VcyEofEhLE05QjmBv69-zyYDQsTcrFhU&usqp=CAU"),
+              height: 50,
+              width: 50,
+            )
+          ],
         )
       ],
     ),
