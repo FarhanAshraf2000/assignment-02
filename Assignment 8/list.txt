@@ -1,0 +1,113 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:login/todo.dart';
+
+class TaskList extends StatefulWidget {
+  List Task;
+  List detail;
+  List date;
+  TaskList(
+      {Key? key, required this.Task, required this.detail, required this.date})
+      : super(key: key);
+
+  @override
+  _TaskListState createState() => _TaskListState(Task, detail, date);
+}
+
+class _TaskListState extends State<TaskList> {
+  List task;
+  List detail;
+  List date;
+  var editTask = "";
+  _TaskListState(this.task, this.detail, this.date);
+  EditFunction(index) {
+    setState(() {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          // return object of type Dialog
+          return AlertDialog(
+            title: Text("Tip"),
+            actions: <Widget>[
+              TextFormField(
+                initialValue: task[index],
+                onChanged: (value) {
+                  editTask = value;
+                },
+              ),
+              TextButton(
+                  onPressed: () {
+                    setState(() {
+                      task[index] = editTask;
+                      Navigator.of(context).pop();
+                    });
+                  },
+                  child: Text("Update"))
+            ],
+          );
+        },
+      );
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("My Task"),
+      ),
+      body: Container(
+        child: ListView.builder(
+            itemCount: task.length,
+            itemBuilder: (context, index) {
+              return Slidable(
+                actionPane: SlidableDrawerActionPane(),
+                child: ListTile(
+                  title: Text(task[index]),
+                  subtitle: Text(detail[index]),
+                  trailing: Text(date[index]),
+                ),
+
+                actions: <Widget>[
+                  IconSlideAction(
+                    caption: "Delete",
+                    color: Colors.red,
+                    icon: Icons.delete,
+                    onTap: () {
+                      setState(() {
+                        task.removeAt(index);
+                      });
+                    },
+                  ),
+                  IconSlideAction(
+                    caption: "Edit",
+                    color: Colors.green,
+                    icon: Icons.edit,
+                    onTap: () {
+                      EditFunction(index);
+                    },
+                  )
+                ],
+// left action bar
+                secondaryActions: <Widget>[
+                  IconSlideAction(
+                    caption: "Block",
+                    color: Colors.black,
+                    icon: Icons.block_rounded,
+                    onTap: () {},
+                  )
+                ],
+              );
+            }),
+      ),
+
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+               Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => Todo()));},
+          
+          child: Icon(Icons.add),
+        ),
+    );
+  }
+}
